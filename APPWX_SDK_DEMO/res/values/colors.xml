@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- menu drawer -->
+    <color name="md__transparent">#00000000</color>
+    <color name="md__defaultBackground">#FF555555</color>
+    
+    <!-- app msg -->
+    <color name="custom">#0099CC</color>
+    
+    <!-- stickylistview -->
+    <color name="header_normal">#e74c3c</color>
+    <color name="header_pressed">#c0392b</color>
+</resources>
