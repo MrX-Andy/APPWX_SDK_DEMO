@@ -2,11 +2,11 @@ package com.appwx.sdk.demo.menudrawer;
 
 public class Item {
 
-    String mTitle;
-    int mIconRes;
+	String mTitle;
+	int mIconRes;
 
-    Item(String title, int iconRes) {
-        mTitle = title;
-        mIconRes = iconRes;
-    }
+	Item(String title, int iconRes) {
+		mTitle = title;
+		mIconRes = iconRes;
+	}
 }

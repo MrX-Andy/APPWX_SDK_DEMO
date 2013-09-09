@@ -10,4 +10,11 @@
     <!-- stickylistview -->
     <color name="header_normal">#e74c3c</color>
     <color name="header_pressed">#c0392b</color>
+    
+    <!-- poppyview -->
+    <color name="selector_poppyview_pressed">#9933cc</color>
+    <color name="selector_poppyview_default">#aa66cc</color>
+    
+    <color name="selector_button_pressed">#9933cc</color>
+    <color name="selector_button_default">#aa66cc</color>
 </resources>

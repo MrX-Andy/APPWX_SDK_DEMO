@@ -27,36 +27,38 @@ import com.appwx.sdk.fadingactionbar.FadingActionBarHelper;
 import com.appwx.sdk.demo.R;
 
 public class SampleFragment extends SherlockFragment {
-    private FadingActionBarHelper mFadingHelper;
-    private Bundle mArguments;
+	private FadingActionBarHelper mFadingHelper;
+	private Bundle mArguments;
 
-    public static final String ARG_IMAGE_RES = "image_source";
-    public static final String ARG_ACTION_BG_RES = "image_action_bs_res";
+	public static final String ARG_IMAGE_RES = "image_source";
+	public static final String ARG_ACTION_BG_RES = "image_action_bs_res";
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = mFadingHelper.createView(inflater);
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		View view = mFadingHelper.createView(inflater);
 
-        if (mArguments != null){
-            ImageView img = (ImageView) view.findViewById(R.id.image_header);
-            img.setImageResource(mArguments.getInt(ARG_IMAGE_RES));
-        }
+		if (mArguments != null) {
+			ImageView img = (ImageView) view.findViewById(R.id.image_header);
+			img.setImageResource(mArguments.getInt(ARG_IMAGE_RES));
+		}
 
-        return view;
-    }
+		return view;
+	}
 
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
+	@Override
+	public void onAttach(Activity activity) {
+		super.onAttach(activity);
 
-        mArguments = getArguments();
-        int actionBarBg = mArguments != null ? mArguments.getInt(ARG_ACTION_BG_RES) : R.drawable.ab_background_light;
+		mArguments = getArguments();
+		int actionBarBg = mArguments != null ? mArguments
+				.getInt(ARG_ACTION_BG_RES) : R.drawable.ab_background_light;
 
-        mFadingHelper = new FadingActionBarHelper()
-            .actionBarBackground(actionBarBg)
-            .headerLayout(R.layout.header_light)
-            .contentLayout(R.layout.activity_scrollview)
-            .lightActionBar(actionBarBg == R.drawable.ab_background_light);
-        mFadingHelper.initActionBar(activity);
-    }
+		mFadingHelper = new FadingActionBarHelper()
+				.actionBarBackground(actionBarBg)
+				.headerLayout(R.layout.header_light)
+				.contentLayout(R.layout.activity_scrollview)
+				.lightActionBar(actionBarBg == R.drawable.ab_background_light);
+		mFadingHelper.initActionBar(activity);
+	}
 }

@@ -2,9 +2,9 @@ package com.appwx.sdk.demo.menudrawer;
 
 public class Category {
 
-    String mTitle;
+	String mTitle;
 
-    Category(String title) {
-        mTitle = title;
-    }
+	Category(String title) {
+		mTitle = title;
+	}
 }

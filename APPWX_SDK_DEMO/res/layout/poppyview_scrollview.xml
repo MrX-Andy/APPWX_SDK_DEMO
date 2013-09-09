@@ -1,0 +1,55 @@
+<com.appwx.sdk.poppyview.NotifyingScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/view1"
+            style="@style/HendrixTextPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFBBFF"
+            android:text="@string/sample_listactivity" />
+
+        <TextView
+            android:id="@+id/view2"
+            style="@style/HendrixTextPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:background="#EEBBEE"
+            android:text="@string/sample_window" />
+
+        <TextView
+            android:id="@+id/view3"
+            style="@style/HendrixTextPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view2"
+            android:background="#DFB0FF"
+            android:text="@string/sample_rightmenu" />
+
+        <TextView
+            android:id="@+id/view4"
+            style="@style/HendrixTextPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view3"
+            android:background="#CBC5F5"
+            android:text="@string/sample_content" />
+
+        <TextView
+            android:id="@+id/view5"
+            style="@style/HendrixTextPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view4"
+            android:background="#BAD0EF"
+            android:text="此示例演示如何适应scrollview弹出poppyview" />
+    </RelativeLayout>
+
+</com.appwx.sdk.poppyview.NotifyingScrollView>

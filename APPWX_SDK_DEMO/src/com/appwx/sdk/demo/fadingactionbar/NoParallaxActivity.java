@@ -24,22 +24,21 @@ import com.appwx.sdk.demo.R;
 
 public class NoParallaxActivity extends SherlockActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 
-        FadingActionBarHelper helper = new FadingActionBarHelper()
-            .actionBarBackground(R.drawable.ab_background)
-            .headerLayout(R.layout.image_header)
-            .contentLayout(R.layout.activity_scrollview)
-            .parallax(false);
-        setContentView(helper.createView(this));
-        helper.initActionBar(this);
-    }
+		FadingActionBarHelper helper = new FadingActionBarHelper()
+				.actionBarBackground(R.drawable.ab_background)
+				.headerLayout(R.layout.image_header)
+				.contentLayout(R.layout.activity_scrollview).parallax(false);
+		setContentView(helper.createView(this));
+		helper.initActionBar(this);
+	}
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getSupportMenuInflater().inflate(R.menu.activity_menu, menu);
-        return true;
-    }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getSupportMenuInflater().inflate(R.menu.activity_menu, menu);
+		return true;
+	}
 }

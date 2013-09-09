@@ -7,22 +7,25 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 public class AppTextView extends TextView {
-	
+
 	public AppTextView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-		setTypeface(Typeface.createFromAsset(context.getAssets(),"Roboto-Light.ttf"));
+		setTypeface(Typeface.createFromAsset(context.getAssets(),
+				"Roboto-Light.ttf"));
 		setHorizontalFadingEdgeEnabled(false);
 	}
 
 	public AppTextView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		setTypeface(Typeface.createFromAsset(context.getAssets(),"Roboto-Light.ttf"));
+		setTypeface(Typeface.createFromAsset(context.getAssets(),
+				"Roboto-Light.ttf"));
 		setHorizontalFadingEdgeEnabled(false);
 	}
 
 	public AppTextView(Context context) {
 		super(context);
-		setTypeface(Typeface.createFromAsset(context.getAssets(),"Roboto-Light.ttf"));
+		setTypeface(Typeface.createFromAsset(context.getAssets(),
+				"Roboto-Light.ttf"));
 		setHorizontalFadingEdgeEnabled(false);
 	}
 
@@ -43,5 +46,5 @@ public class AppTextView extends TextView {
 	public boolean isFocused() {
 		return true;
 	}
-	
+
 }

@@ -29,38 +29,43 @@ import com.actionbarsherlock.app.SherlockListActivity;
 import com.appwx.sdk.demo.R;
 
 public class HomeActivity extends SherlockListActivity {
-    private List<ActivityInfo> activitiesInfo = Arrays.asList(
-            new ActivityInfo(ScrollViewActivity.class, R.string.activity_title_scrollview),
-            new ActivityInfo(ListViewActivity.class, R.string.activity_title_listview),
-            new ActivityInfo(LightBackgroundActivity.class, R.string.activity_title_light_bg),
-            new ActivityInfo(LightActionBarActivity.class, R.string.activity_title_light_ab),
-            new ActivityInfo(SampleFragmentActivity.class, R.string.activity_title_fragment),
-            new ActivityInfo(NavigationDrawerActivity.class, R.string.activity_title_navigation),
-            new ActivityInfo(NoParallaxActivity.class, R.string.activity_title_no_parallax)
-            );
+	private List<ActivityInfo> activitiesInfo = Arrays.asList(new ActivityInfo(
+			ScrollViewActivity.class, R.string.activity_title_scrollview),
+			new ActivityInfo(ListViewActivity.class,
+					R.string.activity_title_listview), new ActivityInfo(
+					LightBackgroundActivity.class,
+					R.string.activity_title_light_bg), new ActivityInfo(
+					LightActionBarActivity.class,
+					R.string.activity_title_light_ab), new ActivityInfo(
+					SampleFragmentActivity.class,
+					R.string.activity_title_fragment), new ActivityInfo(
+					NavigationDrawerActivity.class,
+					R.string.activity_title_navigation), new ActivityInfo(
+					NoParallaxActivity.class,
+					R.string.activity_title_no_parallax));
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-        String[] titles = getActivityTitles();
-        setListAdapter(new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, android.R.id.text1, titles));
-    }
-    
-    @Override
-    protected void onListItemClick(ListView l, View v, int position, long id) {
-        Class<? extends Activity> class_ = activitiesInfo.get(position).activityClass;
-        Intent intent = new Intent(this, class_);
-        startActivity(intent);
-    }
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_home);
+		String[] titles = getActivityTitles();
+		setListAdapter(new ArrayAdapter<String>(this,
+				android.R.layout.simple_list_item_1, android.R.id.text1, titles));
+	}
 
-    private String[] getActivityTitles() {
-        String[] result = new String[activitiesInfo.size()];
-        int i = 0;
-        for (ActivityInfo info : activitiesInfo) {
-            result[i++] = getString(info.titleResourceId);
-        }
-        return result;
-    }
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		Class<? extends Activity> class_ = activitiesInfo.get(position).activityClass;
+		Intent intent = new Intent(this, class_);
+		startActivity(intent);
+	}
+
+	private String[] getActivityTitles() {
+		String[] result = new String[activitiesInfo.size()];
+		int i = 0;
+		for (ActivityInfo info : activitiesInfo) {
+			result[i++] = getString(info.titleResourceId);
+		}
+		return result;
+	}
 }

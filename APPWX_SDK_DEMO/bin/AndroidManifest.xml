@@ -18,13 +18,19 @@
         android:label="@string/app_name"
         android:theme="@style/noTitle" >
         
-        <activity android:name=".MainActivity">
+        <activity android:name=".PoppyViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         
+        <activity android:name="com.appwx.sdk.osp.MainActivity"/>
+        
+        
+        <activity android:name=".poppyview.ScrollViewActivity"></activity>
+        <activity android:name=".poppyview.ListViewActivity"></activity>
+        <activity android:name=".poppyview.PoppyViewActivity"></activity>
         <activity android:name=".slidinguppanel.SlidingUpPanelActivity" />
         <activity android:name=".animator.SecondActivity" />
         <activity android:name=".animator.ActivityAnimatorActivity" />

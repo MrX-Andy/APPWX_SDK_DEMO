@@ -98,4 +98,18 @@
     	<item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
     </style>
 
+    <!-- poppyview -->
+    <style name="MainButton">
+        <item name="android:background">@drawable/selector_button</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="HendrixTextPart" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    
 </resources>

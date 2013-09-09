@@ -13,12 +13,11 @@ import android.widget.BaseAdapter;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
 
-
-
 /**
  * @author Emil Sjölander
  */
-public class TestBaseAdapter extends BaseAdapter implements StickyListHeadersAdapter, SectionIndexer {
+public class TestBaseAdapter extends BaseAdapter implements
+		StickyListHeadersAdapter, SectionIndexer {
 
 	private String[] countries;
 	private int[] sectionIndices;
@@ -47,7 +46,7 @@ public class TestBaseAdapter extends BaseAdapter implements StickyListHeadersAda
 		char lastFirstChar = countries[0].charAt(0);
 		sectionIndices.add(0);
 		for (int i = 1; i < countries.length; i++) {
-			if(countries[i].charAt(0) != lastFirstChar) {
+			if (countries[i].charAt(0) != lastFirstChar) {
 				lastFirstChar = countries[i].charAt(0);
 				sectionIndices.add(i);
 			}
@@ -74,12 +73,14 @@ public class TestBaseAdapter extends BaseAdapter implements StickyListHeadersAda
 		return position;
 	}
 
-	@Override public View getView(int position, View convertView, ViewGroup parent) {
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
 
 		if (convertView == null) {
 			holder = new ViewHolder();
-			convertView = inflater.inflate(R.layout.test_list_item_layout, parent, false);
+			convertView = inflater.inflate(R.layout.test_list_item_layout,
+					parent, false);
 			holder.text = (TextView) convertView.findViewById(R.id.text);
 			convertView.setTag(holder);
 		} else {
@@ -91,7 +92,8 @@ public class TestBaseAdapter extends BaseAdapter implements StickyListHeadersAda
 		return convertView;
 	}
 
-	@Override public View getHeaderView(int position, View convertView, ViewGroup parent) {
+	@Override
+	public View getHeaderView(int position, View convertView, ViewGroup parent) {
 		HeaderViewHolder holder;
 		if (convertView == null) {
 			holder = new HeaderViewHolder();
@@ -102,25 +104,27 @@ public class TestBaseAdapter extends BaseAdapter implements StickyListHeadersAda
 		} else {
 			holder = (HeaderViewHolder) convertView.getTag();
 		}
-		//set header text as first char in name
+		// set header text as first char in name
 		char headerChar = countries[position].subSequence(0, 1).charAt(0);
-//		String headerText = null;
-//		System.out.println("headerChar = " + headerChar);
-//		if(headerChar%2 == 0){
-//			headerText = headerChar + "\n" + headerChar + "\n" + headerChar;
-//		}else{
-//			headerText = headerChar + "\n" + headerChar;
-//		}
-//		System.out.println("headerText111 = " + headerText);
+		// String headerText = null;
+		// System.out.println("headerChar = " + headerChar);
+		// if(headerChar%2 == 0){
+		// headerText = headerChar + "\n" + headerChar + "\n" + headerChar;
+		// }else{
+		// headerText = headerChar + "\n" + headerChar;
+		// }
+		// System.out.println("headerText111 = " + headerText);
 		holder.text1.setText(String.valueOf(headerChar));
-//		holder.text2.setText(headerText);
+		// holder.text2.setText(headerText);
 		return convertView;
 	}
 
-	//remember that these have to be static, postion=1 should walys return the same Id that is.
+	// remember that these have to be static, postion=1 should walys return the
+	// same Id that is.
 	@Override
 	public long getHeaderId(int position) {
-		//return the first character of the country as ID because this is what headers are based upon
+		// return the first character of the country as ID because this is what
+		// headers are based upon
 		return countries[position].subSequence(0, 1).charAt(0);
 	}
 
@@ -135,9 +139,9 @@ public class TestBaseAdapter extends BaseAdapter implements StickyListHeadersAda
 
 	@Override
 	public int getPositionForSection(int section) {
-		if(section >= sectionIndices.length) {
-			section = sectionIndices.length-1;
-		}else if(section < 0){
+		if (section >= sectionIndices.length) {
+			section = sectionIndices.length - 1;
+		} else if (section < 0) {
 			section = 0;
 		}
 		return sectionIndices[section];
@@ -146,26 +150,26 @@ public class TestBaseAdapter extends BaseAdapter implements StickyListHeadersAda
 	@Override
 	public int getSectionForPosition(int position) {
 		for (int i = 0; i < sectionIndices.length; i++) {
-			if(position < sectionIndices[i]) {
-				return i-1;
+			if (position < sectionIndices[i]) {
+				return i - 1;
 			}
 		}
-		return sectionIndices.length-1;
+		return sectionIndices.length - 1;
 	}
 
 	@Override
 	public Object[] getSections() {
 		return sectionsLetters;
 	}
-	
-	public void clear(){
+
+	public void clear() {
 		sectionIndices = new int[0];
 		sectionsLetters = new Character[0];
 		countries = new String[0];
 		notifyDataSetChanged();
 	}
-	
-	public void restore(){
+
+	public void restore() {
 		countries = context.getResources().getStringArray(R.array.countries);
 		sectionIndices = getSectionIndices();
 		sectionsLetters = getStartingLetters();
@@ -175,5 +179,5 @@ public class TestBaseAdapter extends BaseAdapter implements StickyListHeadersAda
 	public int getSectionStart(int itemPosition) {
 		return getPositionForSection(getSectionForPosition(itemPosition));
 	}
-	
+
 }

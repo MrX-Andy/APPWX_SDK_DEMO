@@ -1,6 +1,5 @@
 package com.appwx.sdk.demo.menudrawer;
 
-
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
@@ -21,58 +20,59 @@ import com.appwx.sdk.demo.R;
  */
 public class TopDrawerSample extends Activity implements OnClickListener {
 
-    private static final int MENU_OVERFLOW = 1;
+	private static final int MENU_OVERFLOW = 1;
 
-    private MenuDrawer mMenuDrawer;
-    private TextView mContentTextView;
+	private MenuDrawer mMenuDrawer;
+	private TextView mContentTextView;
 
-    @Override
-    protected void onCreate(Bundle inState) {
-        super.onCreate(inState);
+	@Override
+	protected void onCreate(Bundle inState) {
+		super.onCreate(inState);
 
-        mMenuDrawer = MenuDrawer.attach(this, Position.TOP);
-        mMenuDrawer.setTouchMode(MenuDrawer.TOUCH_MODE_FULLSCREEN);
-        mMenuDrawer.setContentView(R.layout.activity_topmenu);
-        mMenuDrawer.setMenuView(R.layout.menu_top);
+		mMenuDrawer = MenuDrawer.attach(this, Position.TOP);
+		mMenuDrawer.setTouchMode(MenuDrawer.TOUCH_MODE_FULLSCREEN);
+		mMenuDrawer.setContentView(R.layout.activity_topmenu);
+		mMenuDrawer.setMenuView(R.layout.menu_top);
 
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-//            getActionBar().setDisplayHomeAsUpEnabled(true);
-//        }
+		// if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+		// getActionBar().setDisplayHomeAsUpEnabled(true);
+		// }
 
-        mContentTextView = (TextView) findViewById(R.id.contentText);
-        findViewById(R.id.item1).setOnClickListener(this);
-        findViewById(R.id.item2).setOnClickListener(this);
-    }
+		mContentTextView = (TextView) findViewById(R.id.contentText);
+		findViewById(R.id.item1).setOnClickListener(this);
+		findViewById(R.id.item2).setOnClickListener(this);
+	}
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuItem overflowItem = menu.add(0, MENU_OVERFLOW, 0, null);
-        MenuItemCompat.setShowAsAction(overflowItem, MenuItem.SHOW_AS_ACTION_ALWAYS);
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuItem overflowItem = menu.add(0, MENU_OVERFLOW, 0, null);
+		MenuItemCompat.setShowAsAction(overflowItem,
+				MenuItem.SHOW_AS_ACTION_ALWAYS);
 
-        overflowItem.setIcon(R.drawable.ic_menu_moreoverflow_normal_holo_light);
-        return true;
-    }
+		overflowItem.setIcon(R.drawable.ic_menu_moreoverflow_normal_holo_light);
+		return true;
+	}
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
-                return true;
-            case MENU_OVERFLOW:
-                mMenuDrawer.toggleMenu();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			NavUtils.navigateUpFromSameTask(this);
+			return true;
+		case MENU_OVERFLOW:
+			mMenuDrawer.toggleMenu();
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 
-    /**
-     * Click handler for top drawer items.
-     */
-    @Override
-    public void onClick(View v) {
-        String tag = (String) v.getTag();
-        mContentTextView.setText(String.format("%s clicked.", tag));
-        mMenuDrawer.setActiveView(v);
-    }
+	/**
+	 * Click handler for top drawer items.
+	 */
+	@Override
+	public void onClick(View v) {
+		String tag = (String) v.getTag();
+		mContentTextView.setText(String.format("%s clicked.", tag));
+		mMenuDrawer.setActiveView(v);
+	}
 }

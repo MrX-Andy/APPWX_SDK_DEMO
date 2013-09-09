@@ -25,16 +25,16 @@ public class PullRefreshListview extends Activity {
 	private List<String> listStrings;
 	private RefreshListView listRefreshListView;
 	private ArrayAdapter<String> adapter;
-	
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_refreshlistview);
-		
+
 		listStrings = getlistStrings();
 
-		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listStrings);
+		adapter = new ArrayAdapter<String>(this,
+				android.R.layout.simple_list_item_1, listStrings);
 
 		listRefreshListView = (RefreshListView) findViewById(R.id.refreshListView);
 		listRefreshListView.setAdapter(adapter);
@@ -49,13 +49,15 @@ public class PullRefreshListview extends Activity {
 		listRefreshListView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				Toast.makeText(PullRefreshListview.this, "Position: " + position, Toast.LENGTH_SHORT).show();
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				Toast.makeText(PullRefreshListview.this,
+						"Position: " + position, Toast.LENGTH_SHORT).show();
 			}
 
 		});
 	}
-	
+
 	private class DataRetriever extends AsyncTask<Void, Void, String> {
 
 		@Override
@@ -79,11 +81,12 @@ public class PullRefreshListview extends Activity {
 				// Error case
 				listRefreshListView.errorInRefresh("≥ˆ¡À¥Ì¡À");
 			}
-			// call on RefreshListView to hide header and notify the listview, refreshing is done
+			// call on RefreshListView to hide header and notify the listview,
+			// refreshing is done
 			listRefreshListView.finishRefreshing();
 		}
 	}
-	
+
 	private List<String> getlistStrings() {
 		listStrings = new ArrayList<String>();
 		listStrings.add("Android 1.5 Cupcake (API level 3)");
@@ -98,7 +101,8 @@ public class PullRefreshListview extends Activity {
 		listStrings.add("Android 3.1 Honeycomb (API level 12)");
 		listStrings.add("Android 3.2 Honeycomb (API level 13)");
 		listStrings.add("Android 4.0®C4.0.2 Ice Cream Sandwich (API level 14)");
-		listStrings.add("Android 4.0.3®C4.0.4 Ice Cream Sandwich (API level 15)");
+		listStrings
+				.add("Android 4.0.3®C4.0.4 Ice Cream Sandwich (API level 15)");
 		listStrings.add("Android 4.1 Jelly Bean (API level 16)");
 		listStrings.add("Android 4.2 Jelly Bean (API level 17)");
 		return listStrings;

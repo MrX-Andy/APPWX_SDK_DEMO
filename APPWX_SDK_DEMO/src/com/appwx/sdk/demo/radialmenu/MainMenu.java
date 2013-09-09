@@ -37,10 +37,12 @@ public class MainMenu extends ListActivity {
 							RadialMenuActivity.class));
 					break;
 				case 2:
-					startActivity(new Intent(MainMenu.this, RadialProgressActivity.class));
+					startActivity(new Intent(MainMenu.this,
+							RadialProgressActivity.class));
 					break;
 				case 3:
-					startActivity(new Intent(MainMenu.this, SemiCircularRadialMenuActivity.class));
+					startActivity(new Intent(MainMenu.this,
+							SemiCircularRadialMenuActivity.class));
 					break;
 				}
 			}

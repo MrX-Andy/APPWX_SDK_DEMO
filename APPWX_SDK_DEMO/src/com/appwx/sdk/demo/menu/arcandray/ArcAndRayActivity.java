@@ -11,10 +11,11 @@ import com.appwx.sdk.demo.R;
 import com.appwx.sdk.menu.arc.ArcMenu;
 import com.appwx.sdk.menu.ray.RayMenu;
 
-
 public class ArcAndRayActivity extends Activity {
-	private static final int[] ITEM_DRAWABLES = { R.drawable.composer_camera, R.drawable.composer_music,
-			R.drawable.composer_place, R.drawable.composer_sleep, R.drawable.composer_thought, R.drawable.composer_with };
+	private static final int[] ITEM_DRAWABLES = { R.drawable.composer_camera,
+			R.drawable.composer_music, R.drawable.composer_place,
+			R.drawable.composer_sleep, R.drawable.composer_thought,
+			R.drawable.composer_with };
 
 	/** Called when the activity is first created. */
 	@Override
@@ -23,7 +24,7 @@ public class ArcAndRayActivity extends Activity {
 		setContentView(R.layout.arcandray_main);
 
 		ArcMenu arcMenu = (ArcMenu) findViewById(R.id.arc_menu);
-		
+
 		final int itemCount = ITEM_DRAWABLES.length;
 		for (int i = 0; i < itemCount; i++) {
 			ImageView item = new ImageView(this);
@@ -34,7 +35,8 @@ public class ArcAndRayActivity extends Activity {
 
 				@Override
 				public void onClick(View v) {
-					Toast.makeText(ArcAndRayActivity.this, "position:" + position, Toast.LENGTH_SHORT).show();
+					Toast.makeText(ArcAndRayActivity.this,
+							"position:" + position, Toast.LENGTH_SHORT).show();
 				}
 			});// Add a menu item
 		}
@@ -49,7 +51,8 @@ public class ArcAndRayActivity extends Activity {
 
 				@Override
 				public void onClick(View v) {
-					Toast.makeText(ArcAndRayActivity.this, "position:" + position, Toast.LENGTH_SHORT).show();
+					Toast.makeText(ArcAndRayActivity.this,
+							"position:" + position, Toast.LENGTH_SHORT).show();
 				}
 			});// Add a menu item
 		}

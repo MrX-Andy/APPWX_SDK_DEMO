@@ -20,5 +20,4 @@ public class MainPagerAdapter extends FragmentPagerAdapter {
 		return 4;
 	}
 
-
 }

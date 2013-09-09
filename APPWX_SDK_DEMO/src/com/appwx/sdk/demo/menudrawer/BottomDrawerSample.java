@@ -1,6 +1,5 @@
 package com.appwx.sdk.demo.menudrawer;
 
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,30 +15,30 @@ import com.appwx.sdk.demo.R;
  */
 public class BottomDrawerSample extends Activity implements OnClickListener {
 
-    private MenuDrawer mMenuDrawer;
-    private TextView mContentTextView;
+	private MenuDrawer mMenuDrawer;
+	private TextView mContentTextView;
 
-    @Override
-    protected void onCreate(Bundle inState) {
-        super.onCreate(inState);
+	@Override
+	protected void onCreate(Bundle inState) {
+		super.onCreate(inState);
 
-        mMenuDrawer = MenuDrawer.attach(this, Position.BOTTOM);
-        mMenuDrawer.setTouchMode(MenuDrawer.TOUCH_MODE_FULLSCREEN);
-        mMenuDrawer.setContentView(R.layout.activity_bottommenu);
-        mMenuDrawer.setMenuView(R.layout.menu_bottom);
+		mMenuDrawer = MenuDrawer.attach(this, Position.BOTTOM);
+		mMenuDrawer.setTouchMode(MenuDrawer.TOUCH_MODE_FULLSCREEN);
+		mMenuDrawer.setContentView(R.layout.activity_bottommenu);
+		mMenuDrawer.setMenuView(R.layout.menu_bottom);
 
-        mContentTextView = (TextView) findViewById(R.id.contentText);
-        findViewById(R.id.item1).setOnClickListener(this);
-        findViewById(R.id.item2).setOnClickListener(this);
-    }
+		mContentTextView = (TextView) findViewById(R.id.contentText);
+		findViewById(R.id.item1).setOnClickListener(this);
+		findViewById(R.id.item2).setOnClickListener(this);
+	}
 
-    /**
-     * Click handler for bottom drawer items.
-     */
-    @Override
-    public void onClick(View v) {
-        String tag = (String) v.getTag();
-        mContentTextView.setText(String.format("%s clicked.", tag));
-        mMenuDrawer.setActiveView(v);
-    }
+	/**
+	 * Click handler for bottom drawer items.
+	 */
+	@Override
+	public void onClick(View v) {
+		String tag = (String) v.getTag();
+		mContentTextView.setText(String.format("%s clicked.", tag));
+		mMenuDrawer.setActiveView(v);
+	}
 }
