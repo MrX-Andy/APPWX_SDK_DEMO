@@ -6,6 +6,6 @@
     android:clickable="true"
     android:fontFamily="sans-serif-thin"
     android:padding="15dp"
-    android:text="你好, 点我消失,滚动, 我出现"
+    android:text="滚动显示"
     android:textColor="@android:color/white"
     android:textSize="18sp" />
