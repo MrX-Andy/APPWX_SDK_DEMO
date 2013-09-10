@@ -25,6 +25,8 @@
             </intent-filter>
         </activity>
         
+        <activity android:name="com.appwx.sdk.osp.mango.ui.Register"/>
+        <activity android:name="com.appwx.sdk.osp.mango.ui.Splash"/>
         <activity android:name="com.appwx.sdk.osp.MainActivity"/>
         
         
