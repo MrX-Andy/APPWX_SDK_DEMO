@@ -12,7 +12,7 @@ import android.widget.*;
 
 public class ListViewActivity extends Activity {
 
-	private String[] songs = this.getResources().getStringArray(R.array.countries);
+	private String[] songs;
 
 	private PoppyViewHelper mPoppyViewHelper;
 
@@ -20,7 +20,7 @@ public class ListViewActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.poppyview_listview);
-
+		
 		mPoppyViewHelper = new PoppyViewHelper(this);
 		View poppyView = mPoppyViewHelper.createPoppyViewOnListView(
 				R.id.listView1, R.layout.poppyview_item,
@@ -47,7 +47,7 @@ public class ListViewActivity extends Activity {
 						Toast.LENGTH_SHORT).show();
 			}
 		});
-
+		songs = this.getResources().getStringArray(R.array.countries);
 		final ListView listView1 = (ListView) findViewById(R.id.listView1);
 		listView1.setAdapter(new BaseAdapter() {
 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/layout_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:text="密码示例\n正确密码是2, 4, 6, 1"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp" >
+
+        <com.appwx.sdk.wheel.WheelView
+            android:id="@+id/passw_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.appwx.sdk.wheel.WheelView
+            android:id="@+id/passw_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.appwx.sdk.wheel.WheelView
+            android:id="@+id/passw_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.appwx.sdk.wheel.WheelView
+            android:id="@+id/passw_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pwd_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:text="错误密码"
+        android:textColor="#FFF"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_mix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:text="跑一下"
+        android:textSize="18sp" />
+
+</LinearLayout>

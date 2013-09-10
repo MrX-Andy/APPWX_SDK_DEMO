@@ -1,0 +1,77 @@
+<resources>
+
+    <string name="app_name">APPWX_SDK_DEMO</string>
+
+    <string name="tv_text">appwx_sdk 示例</string>
+    
+    <!-- menu drawer -->
+    <string name="sample_content">拖动的内容。\ n此菜单样本包括一个ListView，
+        主动位置保存配置更改。\ nAdditionally，如果菜单是开放的，一回记者会
+        关闭.
+    </string>
+
+    <string name="sample_window">拖动整个窗口。\ n此菜单样本是一个简单的滚动，点击
+        侦听器上设置的每个项目。\ n此的抽屉将动画微微张开，使其更容易被发现。\ nAdditionally，
+        如果菜单是开放的，按一回将关闭.
+    </string>
+
+    <string name="sample_listactivity">如何使用抽屉与ListActivity的样品。\ n当上运行ICS或
+        更大，在ActionBar向上按钮将闪烁，直到用户点击。这样做是为了使菜单
+        发现的。\ nAdditionally，如果菜单是开放式的，一回记者将其关闭.
+    </string>
+
+    <string name="sample_rightmenu">此示例演示如何将菜单的内容的权利。\ nRun上
+        API14+设备，看它如何与溢出按钮.
+    </string>
+
+    <string name="sample_topmenu">此示例演示如何将菜单上面的内容.</string>
+
+    <string name="sample_bottommenu">此示例演示如何将菜单下面的内容.</string>
+
+    <string name="sample_layout">此示例演示如何在布局文件中使用抽屉。
+        此示例中使用\ n顶部的抽屉.
+    </string>
+
+    <string name="sample_static">此示例显示如何附加抽屉始终可见.</string>
+    
+    <!-- app msg -->
+    <string name="alert">警告</string>
+    <string name="confirm">确认</string>
+    <string name="info">信息</string>
+    <string name="custom">自定义样式</string>
+    <string name="bottom">显示在屏幕的下面</string>
+    
+    <!-- fadingactionbar -->
+    <string name="action_settings">Settings</string>
+    <string name="new_york_city">New York City</string>
+    <string name="activity_title_scrollview">ScrollView sample</string>
+    <string name="activity_title_listview">ListView sample</string>
+    <string name="activity_title_light_bg">Light background sample</string>
+    <string name="activity_title_light_ab">Light action bar sample</string>
+    <string name="activity_title_fragment">Fragment sample</string>
+    <string name="activity_title_no_parallax">No parallax sample</string>
+    <string name="loren_ipsum">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis diam. Pellentesque ut neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. In ac felis quis tortor malesuada pretium. Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Aenean viverra rhoncus pede. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non enim eleifend felis pretium feugiat. Vivamus quis mi. Phasellus a est. Phasellus magna. In hac habitasse platea dictumst. Curabitur at lacus ac velit ornare lobortis. Curabitur a felis in nunc fringilla tristique.</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">close_drawer</string>
+    <string name="activity_title_navigation">Navigation Drawer Example</string>
+    <string name="choose_city">Choose a city</string>
+    
+    <!-- Radial Menu -->
+    <string name="radial_demo">Radial Menu</string>
+	<string name="about">About</string>
+	<string name="main_menu">Home</string>
+	<string name="contact">Contact</string>
+	<string name="about_body">Radial Menu Demo Version 1 by Arindam Nath.</string>
+	<string name="contact_body">Contact Details Here!</string>
+	<string name="main_body">Long press any part of the screen to bring up radial menu.</string>
+	<string name="open_menu">Open Menu</string>
+	<string name="normal">Normal</string>
+	<string name="expandable">Expandable</string>
+	<string name="close">Close</string>
+	<string-array name="main_menu">
+	    <item>Radial Menu V1</item>
+	    <item>Radial Menu V2</item>
+	    <item>Radial Progress</item>
+	    <item>Semi Circular Radial Menu</item>
+	</string-array>
+</resources>

@@ -1,0 +1,160 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.appwx.sdk.demo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/noTitle" >
+        
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".slidinguppanel.SlidingUpPanelActivity" />
+        <activity android:name=".animator.SecondActivity" />
+        <activity android:name=".animator.ActivityAnimatorActivity" />
+        <activity android:name=".viewpager.JazzyViewPagerActivity" />
+        <activity android:name=".refreshlistview.PullRefreshListview" />
+        <activity android:name=".pla.WaterFallActivity" />
+        <activity android:name=".imageview.SmartImageViewActivity" />
+        <activity android:name=".menu.arcandray.ArcAndRayActivity" />
+        <activity android:name=".satellitemenu.SatelliteMenuActivity" />
+        <activity android:name=".radialmenu.AltRadialMenuActivity" android:label="Radial Menu V1" />
+        <activity android:name=".radialmenu.RadialMenuActivity" android:label="Radial Menu V2" />
+        <activity android:name=".radialmenu.RadialProgressActivity" android:label="Radial Progress" />
+        <activity android:name=".radialmenu.SemiCircularRadialMenuActivity" android:label="Semi Circular Radial Menu" />
+        <activity android:name=".radialmenu.MainMenu" />
+        <activity android:name=".stickylistview.StickyListViewActivity" />
+        <activity android:name=".wheelmenu.WheelMenuActivity" />
+        <activity android:name=".appmsg.AppMsgActivity" />
+        <activity android:name=".menudrawer.MenuDrawerActivity" />
+        <activity android:name=".menudrawer.WindowSample" />
+        <activity android:name=".menudrawer.LeftDrawerSample" />
+        <activity android:name=".menudrawer.ListActivitySample" />
+        <activity android:name=".menudrawer.ViewPagerSample" />
+        <activity
+            android:name=".menudrawer.RightDrawerSample"
+            android:theme="@style/SampleTheme.RightDrawer" />
+        <activity
+            android:name=".menudrawer.TopDrawerSample"
+            android:theme="@style/SampleTheme.TopDrawer">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".menudrawerActivity" />
+        </activity>
+        <activity
+            android:name=".menudrawer.BottomDrawerSample"
+            android:theme="@style/SampleTheme.BottomDrawer" />
+        <activity
+            android:name=".menudrawer.LayoutSample"
+            android:theme="@style/SampleTheme.TopDrawer" />
+        <activity android:name=".menudrawer.StaticDrawerSample" />
+        <activity android:name=".menudrawer.FragmentSample" />
+        <activity
+            android:name=".menudrawer.ActionBarSherlockSample"
+            android:theme="@style/SampleTheme.Sherlock" />
+        <activity android:name=".menudrawer.LeftOverlaySample" />
+        <activity
+            android:name=".menudrawer.TopOverlaySample"
+            android:theme="@style/SampleTheme.TopDrawer" />
+        <activity android:name=".menudrawer.RightOverlaySample" />
+        <activity
+            android:name=".menudrawer.BottomOverlaySample"
+            android:theme="@style/SampleTheme.BottomDrawer" />
+        
+        <activity android:name=".wheel.CitiesActivity" android:label="城市示例">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appwx.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".wheel.DateActivity" android:label="日期示例">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appwx.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".wheel.PasswActivity" android:label="密码示例">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appwx.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".wheel.SlotMachineActivity" android:label="老虎机示例">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appwx.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".wheel.SpeedActivity" android:label="速度示例">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appwx.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".wheel.Time2Activity" android:label="时间示例2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appwx.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".wheel.TimeActivity" android:label="时间示例1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appwx.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".wheel.WheelActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appwx.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".fadingactionbar.NoParallaxActivity" 
+            android:icon="@drawable/ic_location_map"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity android:name=".fadingactionbar.NavigationDrawerActivity" 
+            android:icon="@drawable/ic_location_map"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity android:name=".fadingactionbar.SampleFragmentActivity" 
+            android:icon="@drawable/ic_location_map"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity android:name=".fadingactionbar.LightActionBarActivity" 
+            android:icon="@drawable/ic_location_map"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity android:name=".fadingactionbar.LightBackgroundActivity" 
+            android:icon="@drawable/ic_location_map"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity android:name=".fadingactionbar.ListViewActivity" 
+            android:icon="@drawable/ic_location_map"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity android:name=".fadingactionbar.ScrollViewActivity" 
+            android:icon="@drawable/ic_location_map"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity android:name=".fadingactionbar.HomeActivity"/>
+    </application>
+
+</manifest>

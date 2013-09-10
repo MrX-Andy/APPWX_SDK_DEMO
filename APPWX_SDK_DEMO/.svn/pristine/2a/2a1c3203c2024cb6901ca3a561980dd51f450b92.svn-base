@@ -1,0 +1,101 @@
+<resources>
+    
+    <!-- drawer menu -->
+    <style name="Samples" />
+
+    <style name="Samples.Category">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:background">@drawable/md__category_background</item>
+
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="MenuDrawer" />
+
+    <style name="MenuDrawer.Widget" />
+
+    <style name="MenuDrawer.Widget.Category">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorSecondaryInverse</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:background">@drawable/md__category_background</item>
+
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="MenuDrawer.Widget.Title">
+        <item name="android:background">@drawable/md__list_selector_holo_dark</item>
+        <item name="android:textAppearance">?android:attr/textAppearance</item>
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="MenuDrawerStyle" parent="Widget.MenuDrawer">
+        <item name="mdActiveIndicator">@drawable/menu_arrow</item>
+        <item name="mdMenuSize">250dp</item>
+    </style>
+
+    <style name="MenuDrawerStyle.Right" parent="Widget.MenuDrawer">
+        <item name="mdActiveIndicator">@drawable/menu_arrow_right</item>
+        <item name="mdMenuSize">150dp</item>
+    </style>
+
+    <style name="MenuDrawerStyle.Top" parent="Widget.MenuDrawer">
+        <item name="mdActiveIndicator">@drawable/menu_arrow_top</item>
+        <item name="mdMenuSize">64dp</item>
+        <item name="mdAllowIndicatorAnimation">true</item>
+    </style>
+
+    <style name="MenuDrawerStyle.Bottom" parent="Widget.MenuDrawer">
+        <item name="mdActiveIndicator">@drawable/menu_arrow_bottom</item>
+        <item name="mdMenuSize">64dp</item>
+    </style>
+    
+    
+    <!-- fadingactionbar -->
+    <style name="Widget.ActionBar" parent="@style/Widget.Sherlock.Light.ActionBar.Solid.Inverse">
+    </style>
+	
+	<style name="Widget.Light" />
+	
+    <style name="Widget.Light.ActionBar" parent="@style/Widget.Sherlock.Light.ActionBar.Solid">
+    </style>
+
+    <style name="Widget.ActionBar.Transparent">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.Light.ActionBar.Transparent">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+    
+    <!-- Radial Menu -->
+    <style name="CustomWindowTitleBackground">
+		<item name="android:background">@android:color/white</item>
+    </style>
+    
+    <style name="RadialMenuLegacyTitleBar" parent="android:Theme">
+    	<item name="android:windowTitleSize">35dp</item>
+    	<item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+    </style>
+
+</resources>

@@ -65,8 +65,15 @@
 # view res/layout/abs__search_view.xml #generated:84
 -keep class com.actionbarsherlock.widget.SearchView$SearchAutoComplete { <init>(...); }
 
+# view res/layout/list_item_header.xml #generated:6
+-keep class com.afollestad.cardsui.LightItalicTextView { <init>(...); }
+
+# view res/layout/list_item_card.xml #generated:19
+# view res/layout/list_item_header.xml #generated:8
+-keep class com.afollestad.silk.views.text.SilkTextView { <init>(...); }
+
 # view AndroidManifest.xml #generated:21
--keep class com.appwx.sdk.demo.PoppyViewActivity { <init>(...); }
+-keep class com.appwx.sdk.demo.MainActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:36
 -keep class com.appwx.sdk.demo.animator.ActivityAnimatorActivity { <init>(...); }

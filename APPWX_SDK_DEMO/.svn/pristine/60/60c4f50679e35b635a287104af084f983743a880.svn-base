@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="APPWX_SDK_DEMO" default="release-market">
+
+    <!-- build init -->
+    <!-- SDK路径 -->
+    <property file="local.properties" />
+
+    <!-- 签名相关-->
+    <property file="ant.properties" />
+
+    <!-- 编译环境 -->
+    <property environment="env" />
+    <condition property="sdk.dir" value="${env.ANDROID_HOME}">
+        <isset property="env.ANDROID_HOME" />
+    </condition>
+
+    <!-- 编译SDK版本 -->
+    <loadproperties srcFile="project.properties" />
+    
+    <tstamp prefix="build-info">
+		<format property="current-date" pattern="d-MMMM-yyyy" locale="en" />
+		<format property="current-time" pattern="hh:mm:ss a z" locale="en" />
+		<format property="year-month-day" pattern="yyyy-MM-dd" locale="en" />
+		<format property="buildlabel" pattern="yyyyMMddHHmm" locale="en" />
+	</tstamp>
+    
+    <!-- quick check on sdk.dir -->
+    <fail
+            message="sdk.dir丢失。确保使用Android更新项目的生成local.properties或注入通过ANDROID_HOME环境变量."
+            unless="sdk.dir"
+    />
+
+    <import file="custom_rules.xml" optional="true" />
+
+    <import file="${sdk.dir}/tools/ant/build.xml" />
+    
+    <!-- build begin -->
+	<!-- 应用名称 -->
+	<target name="release-market" 
+	    depends="-set-release-mode, -release-obfuscation-check, -package, -post-package, -release-prompt-for-password, -release-nosign, -release-sign-market, -post-build" 
+	    description="在释放模式构建应用程序.">
+	</target>
+	
+	<target name="-release-sign-market" if="has.keystore">
+	    <!-- 只创建apk文件,不附带lib库 -->
+	    <do-only-if-not-library elseText="Library project: do not create apk...">
+	    <sequential>
+	        <!-- 打印未签apk绝对路径 -->
+	        <property name="out.unaligned.file" location="${out.absolute.dir}/${ant.project.name}-release-unsigned.apk" />
+
+				<echo level="info">Signing final apk...</echo>
+				<!-- 打印出apk名称,并输出只定文件夹路径 -->
+				<signapk 
+				    input="${out.packaged.file}" 
+				    output="E:/APK_Build/${ant.project.name}_${version.name}_${build-info.buildlabel}build.apk" 
+				    keystore="${key.store}" 
+				    storepass="${key.store.password}" 
+				    alias="${key.alias}" 
+				    keypass="${key.alias.password}" />
+				
+				<!-- Zip aligns the APK -->
+				<zipalign-helper in.package="${out.unaligned.file}" out.package="${out.final.file}" />
+				<echo level="info">Release Package: ${out.final.file}</echo>
+	    </sequential>
+	    </do-only-if-not-library>
+	    <record-build-info />
+	</target>
+	
+</project>
